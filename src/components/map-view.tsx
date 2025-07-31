@@ -16,12 +16,10 @@ interface MapViewProps {
   selectedRows: Set<string>
   tableVisible: boolean
   tableMaximized: boolean
-  isExtentActive: boolean
-  setIsExtentActive: Dispatch<SetStateAction<boolean>>
   isFilterCollapsed?: boolean
 }
 
-const MapViewComponent: FC<MapViewProps> = ({ isMapLoading, setIsMapLoading, selectedRows, tableVisible, tableMaximized, isExtentActive, setIsExtentActive, isFilterCollapsed = false }) => {
+const MapViewComponent: FC<MapViewProps> = ({ isMapLoading, setIsMapLoading, selectedRows, tableVisible, tableMaximized, isFilterCollapsed = false }) => {
   const mapContainer = useRef<HTMLDivElement | null>(null)
   const map = useRef<mapboxgl.Map | null>(null)
   const [isAutoFitEnabled, setIsAutoFitEnabled] = useState(true)

@@ -79,8 +79,6 @@ function App() {
           selectedRows={selectedRows}
           tableVisible={tableVisible}
           tableMaximized={isTableMaximized}
-          isExtentActive={isExtentActive}
-          setIsExtentActive={setIsExtentActive}
           isFilterCollapsed={!isMobile && isFilterCollapsed}
         />
         
